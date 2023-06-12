@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Charge extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['rental_id', 'charge_type', 'total', 'description'];
 }

@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('charges', function (Blueprint $table) {
             $table->id();
-            $table->foreignUuid('rents')->constrained()->cascadeOnUpdate()->cascadeOnDelete();
+            $table->foreignUuid('rental_id')->constrained('rentals')->cascadeOnUpdate()->cascadeOnDelete();
             $table->string('charge_type');
             $table->integer('total');
             $table->text('description');

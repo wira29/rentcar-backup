@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Rent;
 use App\Models\Payment;
 use Illuminate\Http\Request;
 
@@ -18,5 +19,19 @@ class TransactionController extends Controller
                             ->get()
         ];
         return view('landing.pages.transaction.index', $data);
+    }
+
+    public function transaksiRental()
+    {
+        $data = [
+            'transaction' => Rent::query()
+            ->whereRelation('car', function($q) {
+                return $q->whereRelation('rental', function($q){
+                    return $q->where('user_id', auth()->id());
+                });
+            })
+            ->get()
+        ];
+        return view('dashboard.transaction.index', $data);
     }
 }

@@ -11,6 +11,7 @@ use App\Http\Controllers\{Dashboard\ConditionController,
     TransactionController};
 use App\Http\Controllers\Dashboard\RentcarController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\PunishmentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -70,6 +71,9 @@ Route::middleware('auth')->group(function() {
             'conditions' => ConditionController::class,
             'rental' => RentalController::class,
         ]);
+        Route::get('/transaksi', [TransactionController::class, 'transaksiRental'])->name('transaksi');
+        Route::get('/denda', [PunishmentController::class, 'index'])->name('denda');
+        Route::post('/storeDenda', [PunishmentController::class, 'store'])->name('storeDenda');
     });
 });
 
