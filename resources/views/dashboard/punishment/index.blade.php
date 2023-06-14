@@ -26,6 +26,7 @@
                                         <th>Selesai Tanggal</th>
                                         <th>Status</th>
                                         <th>Denda</th>
+                                        <th>Detail</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -41,11 +42,21 @@
                                             </td>
                                             <td>{{ $hukuman->status }}</td>
                                             @if ($hukuman->status == 'disewa')
-                                                <td><button class="btn btn-danger btn-sm denda"
-                                                        data-id="{{ $hukuman->id }}"
-                                                        onclick="modal({{ $hukuman->id }})">Denda</button></td>
+                                                <td>
+                                                    <button class="btn btn-danger btn-sm denda"
+                                                        data-id="{{ $hukuman->id }}">Denda</button>
+                                                </td>
                                             @else
+                                                <td>-</td>
                                             @endif
+                                            @if ($hukuman->status == 'disewa')
+                                                <td><a href="{{ route('rental.denda.show', [$hukuman->id]) }}"
+                                                        class="btn btn-warning btn-sm">Detail</a>
+                                                </td>
+                                            @else
+                                            <td>-</td>
+                                            @endif
+
                                         </tr>
                                     @endforeach
                                 </tbody>
@@ -61,10 +72,11 @@
                             <h5 class="modal-title">Masukkan data denda</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <form action="{{ route('rental.storeDenda') }}" id="dendaForm" method="POST">
+                        <form action="{{ route('rental.denda.store') }}" id="dendaForm" method="POST">
                             @csrf
                             @method('POST')
                             <div class="modal-body m-3">
+                                <input type="hidden" name="rent_id" value="">
                                 <div class="col-md-12 mb-2">
                                     <label class="form-label">Tipe Kerusakan</label>
                                     <input type="text" value="{{ old('charge_type') }}" name="charge_type"
@@ -77,8 +89,8 @@
                                 </div>
                                 <div class="col-md-12 mb-2">
                                     <label class="form-label">Deskripsi Denda</label>
-                                    <textarea class="form-control" name="description" id="" cols="20" rows="5" value="{{ old('description') }}"
-                                        placeholder="Deskripsi"></textarea>
+                                    <textarea class="form-control" name="description" id="" cols="20" rows="5"
+                                        value="{{ old('description') }}" placeholder="Deskripsi"></textarea>
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -99,15 +111,11 @@
             $("#datatables-reponsive").DataTable({
                 responsive: true
             });
-            $(document).on('click', '.denda', function() {
+            $('.denda').click(function() {
                 $('#dendaModal').modal('show')
-                const id = $(this).attr('data-id');
+                const id = $(this).data('id');
+                $('input[name="rent_id"]').val(id)
             });
         });
-
-
-        function modal(id) {
-            $('#dendaModal').modal('show')
-        }
     </script>
 @endsection

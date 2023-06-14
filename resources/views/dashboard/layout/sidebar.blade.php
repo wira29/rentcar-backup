@@ -105,7 +105,7 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="{{ route('rental.denda') }}">
+                    <a class="sidebar-link" href="{{ route('rental.denda.index') }}">
                         <i class="fas fa-dollar-sign"></i>
                         <span class="align-middle">Denda</span>
                     </a>

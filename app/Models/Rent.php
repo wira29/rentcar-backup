@@ -11,7 +11,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Rent extends Model
 {
     use HasFactory;
-
+    public $incrementing = false;
+    public $keyType = 'char';
     protected $fillable = ['id', 'car_id', 'driver_id', 'users', 'start_date', 'end_date', 'status'];
 
     public function car(): BelongsTo

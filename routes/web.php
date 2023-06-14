@@ -70,10 +70,9 @@ Route::middleware('auth')->group(function() {
             'drivers' => DriverController::class,
             'conditions' => ConditionController::class,
             'rental' => RentalController::class,
+            'denda' => PunishmentController::class,
         ]);
         Route::get('/transaksi', [TransactionController::class, 'transaksiRental'])->name('transaksi');
-        Route::get('/denda', [PunishmentController::class, 'index'])->name('denda');
-        Route::post('/storeDenda', [PunishmentController::class, 'store'])->name('storeDenda');
     });
 });
 

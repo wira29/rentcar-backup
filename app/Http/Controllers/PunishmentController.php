@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Rent;
-use App\Models\Charge;
-use Illuminate\Http\Request;
 use App\Http\Controllers\PunishmentController;
+use App\Models\Charge;
+use App\Models\Rent;
+use Illuminate\Http\Request;
 
 class PunishmentController extends Controller
 {
@@ -34,10 +34,26 @@ class PunishmentController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-        $data['rental_id'] = auth()->user()->rental->id;
-
         Charge::create($data);
 
         return redirect()->back()->with('success', 'Berhasil menambahkan Denda !');
+    }
+
+    public function show($id)
+    {
+        $data = [
+            'penalty' => Charge::query()
+                ->whereRelation('rent', function ($q) use ($id) {
+                    return $q->where('rent_id', $id);
+                })
+                ->get(),
+        ];
+        return view('dashboard.punishment.show', $data);
+    }
+
+    public function destroy(Charge $denda)
+    {
+        $denda->delete();
+        return redirect()->back()->with('success', 'Berhasil menghapus denda !');
     }
 }
