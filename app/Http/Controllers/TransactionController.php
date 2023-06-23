@@ -18,7 +18,15 @@ class TransactionController extends Controller
                             ->orderBy('date', 'desc')
                             ->get()
         ];
+
         return view('landing.pages.transaction.index', $data);
+    }
+
+    public function setSelesai(Rent $rent)
+    {
+        $rent->update(['status' => 'selesai']);
+
+        return back();
     }
 
     public function transaksiRental()
@@ -32,6 +40,7 @@ class TransactionController extends Controller
             })
             ->get()
         ];
+//        dd($data);
         return view('dashboard.transaction.index', $data);
     }
 }

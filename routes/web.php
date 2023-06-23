@@ -4,7 +4,8 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\Dashboard\CarController;
 use App\Http\Controllers\Dashboard\DriverController;
 use App\Http\Controllers\Dashboard\HomeController;
-use App\Http\Controllers\{Dashboard\ConditionController,
+use App\Http\Controllers\{ContactController,
+    Dashboard\ConditionController,
     Dashboard\ProfileRentalController,
     Dashboard\RentalController,
     HomeController as LandingHomeController,
@@ -36,6 +37,7 @@ Route::name('landing.')->group(function() {
     Route::get('/', [LandingHomeController::class, 'index'])->name('home');
 
     Route::get('/about', [AboutController::class, 'index'])->name('about');
+    Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 
     Route::middleware('auth')->group(function() {
         Route::get('/search/', [LandingHomeController::class, 'searchRentals'])->name('searchRentals');
@@ -50,7 +52,7 @@ Route::name('landing.')->group(function() {
 Auth::routes();
 
 Route::middleware('auth')->group(function() {
-    Route::get('/home', [HomeController::class, 'index'])->name('home');
+    Route::get('/home', [HomeController::class, 'index'])->name('   home');
 
     Route::get('profile/{id}/edit', [ProfileRentalController::class, 'edit'])->name('edit-profile');
     Route::post('profile/{id}/update', [ProfileRentalController::class, 'update'])->name('update-profile');
@@ -70,9 +72,11 @@ Route::middleware('auth')->group(function() {
             'drivers' => DriverController::class,
             'conditions' => ConditionController::class,
             'rental' => RentalController::class,
-            'denda' => PunishmentController::class,
         ]);
         Route::get('/transaksi', [TransactionController::class, 'transaksiRental'])->name('transaksi');
+        Route::get('/denda', [PunishmentController::class, 'index'])->name('denda');
+        Route::post('/storeDenda', [PunishmentController::class, 'store'])->name('storeDenda');
+        Route::get('/setSelesai/{rent}', [TransactionController::class, 'setSelesai'])->name('setSewaSelesai');
     });
 });
 

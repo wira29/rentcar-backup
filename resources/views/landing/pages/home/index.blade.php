@@ -66,14 +66,14 @@
                         </div>
                         <div class="col-md-8 d-flex align-items-center">
                             <div class="services-wrap rounded-right w-100">
-                                <h3 class="heading-section mb-4">Better Way to Rent Your Perfect Cars</h3>
+                                <h3 class="heading-section mb-4">Cara Untuk Menyewa Mobil</h3>
                                 <div class="row d-flex mb-4">
                                     <div class="col-md-4 d-flex align-self-stretch ftco-animate">
                                         <div class="services w-100 text-center">
                                             <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-route"></span>
                                             </div>
                                             <div class="text w-100">
-                                                <h3 class="heading mb-2">Choose Your Pickup Location</h3>
+                                                <h3 class="heading mb-2">Pilih Lokasi Anda</h3>
                                             </div>
                                         </div>
                                     </div>
@@ -82,7 +82,7 @@
                                             <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-handshake"></span>
                                             </div>
                                             <div class="text w-100">
-                                                <h3 class="heading mb-2">Select the Best Deal</h3>
+                                                <h3 class="heading mb-2">Pilih Penawaran Terbaik</h3>
                                             </div>
                                         </div>
                                     </div>
@@ -91,7 +91,7 @@
                                             <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-rent"></span>
                                             </div>
                                             <div class="text w-100">
-                                                <h3 class="heading mb-2">Reserve Your Rental Car</h3>
+                                                <h3 class="heading mb-2">Pesan Mobil Sewa Anda</h3>
                                             </div>
                                         </div>
                                     </div>
@@ -212,123 +212,6 @@
         </div>
     </div>
 
-    <div class="row justify-content-center mb-5">
-        <div class="col-lg-8 ftco-animate">
-            <div class="text w-100 text-center">
-                <h3 class="fw-bold fs-md-4 fs-lg-5 fs-xl-6">Frequently Asked Questions (FAQ)</h3>
-            </div>
-        </div>
-    </div>
-
-    <!-- Example Code -->
-
-    <div class="accordion" id="accordionExample">
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                    Mengapa saya harus menyewa mobil di RENTCAR?
-                </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample" style="">
-                <div class="accordion-body">
-                    Memesan mobil sebelum perjalanan melalui RENTCAR akan mengurangi kerepotan, juga menghemat waktu dan uang Anda. Anda bisa memilih dari berbagai jenis mobil yang tersedia dari penyedia rental yang terpercaya untuk berkeliling kota.
-                    Pesan mobil yang cocok dengan kebutuhan Anda di RENTCAR dan Anda akan menikmati konfirmasi langsung dengan harga terbaik.
-                </div>
-            </div>
-        </div>
-        <div class="accordion-item" id="accordionExample">
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Bagaimana cara memesan rental mobil di RENTCAR ?
-                    </button>
-                </h2>
-            </div>
-            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    Anda dapat memesan mobil dalam beberapa langkah mudah berikut:
-                    Pilih kota/wilayah rental, tanggal rental, durasi rental dan waktu jemput.
-                    Pilih tipe mobil dan penyedia rental.
-                    Isi detail kontak atau data wisatawan jika Anda pesan untuk orang lain.
-                    Isi detail rental
-                    Pastikan bahwa semua detail telah diisi dengan benar, kemudian pilih metode pembayaran.
-                    Setelah pembayaran Anda diverifikasi, Anda akan menerima email berisi e-voucher rental mobil Anda dari RENTACAR.
-                </div>
-            </div>
-        </div>
-
-        <div class="accordion-item" id="accordionExample">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Bisakah pemesanan mobil dan waktu penjemputan dilakukan dihari yang sama ?
-                </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    Tentu bisa! Tapi Anda harus menyewa mobil paling lambat 12 jam sebelum waktu penjemputan. Pelajari lebih lanjut di halaman bantuan rental mobil
-                </div>
-            </div>
-        </div>
-
-        <div class="accordion-item" id="accordionExample">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Bagaimana saya tahu apakah saya perlu memesan paket luar kota ?
-                </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    Cari tahu dengan mengikuti langkah berikut:
-
-                    Lihat detail produk.
-                    Di bagian Luar Kota, ketuk Lihat Peta Zona.
-                    Periksa apakah lokasi Anda termasuk dalam area merah yang ditentukan di peta atau termasuk di dalam daftar zona.
-                </div>
-            </div>
-        </div>
-
-        <div class="accordion-item" id="accordionExample">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Apa saja yang termasuk dalam jasa rental dasar ?
-                </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    Jasa rental dasar tanpa tambahan termasuk penggunaan mobil dalam kota hingga 12 jam per hari ATAU hingga 23:59 serta jasa sopir. Bensin, uang tol, tips dan uang makan sopir tidak termasuk.
-                </div>
-            </div>
-        </div>
-
-        <div class="accordion-item" id="accordionExample">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Saya tidak bisa menghubungi sopir saya, apakah yang harus dilakukan ?
-                </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    Buka Pesanan dan langsung hubungi perusahaan penyewa mobil. Jika sopir Anda masih tidak bisa dihubungi, hubungi Customer Service RENTCAR.
-                </div>
-            </div>
-        </div>
-
-        <div class="accordion-item" id="accordionExample">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Bisakah saya reschedule pemesanan rental mobil saya ?
-                </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    Sayangnya, Anda tidak bisa reschedule pemesanan rental mobil Anda. Anda harus menghubungi Customer Service kami untuk membatalkan pesanan Anda. Kemudian, buat pesanan lagi dengan tanggal yang sesuai dengan kebutuhan Anda.
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- End Example Code -->
 @endsection
 @section('script')
     <script>

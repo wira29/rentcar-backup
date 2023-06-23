@@ -2,10 +2,9 @@
 
 namespace App\Models;
 
-use App\Models\Charge;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Rental extends Model
 {
@@ -32,10 +31,5 @@ class Rental extends Model
     public function conditions() : HasMany
     {
         return $this->hasMany(Condition::class);
-    }
-
-    public function charges() :HasMany
-    {
-        return $this->hasMany(Charge::class);
     }
 }

@@ -24,6 +24,7 @@
                                     <th>Mulai Tanggal</th>
                                     <th>Selesai Tanggal</th>
                                     <th>Status</th>
+                                    <th>Aksi</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -31,11 +32,18 @@
                                     <tr>
                                         <td>{{$loop->iteration}}</td>
                                         <td>{{$transaksi->user->name}}</td>
-                                        <td>{{$transaksi->driver->name}}</td>
+                                        <td>{{($transaksi->driver) ? $transaksi->driver->name : '-'}}</td>
                                         <td>{{$transaksi->car->name}}</td>
                                         <td>{{ \Carbon\Carbon::parse($transaksi->start_date)->locale('id')->isoFormat('D MMMM YYYY HH:mm') }}</td>
                                         <td>{{ \Carbon\Carbon::parse($transaksi->end_date)->locale('id')->isoFormat('D MMMM YYYY HH:mm') }}</td>
                                         <td>{{$transaksi->status}}</td>
+                                        <td>
+                                            @if($transaksi->status != 'selesai')
+                                                <button data-id="{{ $transaksi->id }}" class="btn btn-success btn-selesai">Konfirmasi Selesai</button>
+                                            @else
+                                                -
+                                            @endif
+                                        </td>
                                     </tr>
                                     @endforeach
 
@@ -65,5 +73,13 @@
                 $('#deleteForm').attr('action', url);
             });
         });
+
+        $('.btn-selesai').click(function() {
+            const konf = window.confirm("apakah anda yakin ?")
+
+            if(konf){
+                window.location.replace('{{ route("rental.setSewaSelesai", ":id") }}'.replace(":id", $(this).data("id")))
+            }
+        })
     </script>
 @endsection
