@@ -52,7 +52,7 @@ Route::name('landing.')->group(function() {
 Auth::routes();
 
 Route::middleware('auth')->group(function() {
-    Route::get('/home', [HomeController::class, 'index'])->name('   home');
+    Route::get('/home', [HomeController::class, 'index'])->name('home');
 
     Route::get('profile/{id}/edit', [ProfileRentalController::class, 'edit'])->name('edit-profile');
     Route::post('profile/{id}/update', [ProfileRentalController::class, 'update'])->name('update-profile');
